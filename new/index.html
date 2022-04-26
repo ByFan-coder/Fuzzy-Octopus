@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome... .</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">logo</div>
+        <ul>
+            <li class="active">主页</li>
+            <li>文章<a href="/#"></a></li>
+            <li>关与</li>
+            <li>我的</li>
+        </ul>
+    </header>
+    <section>
+        <img src="./images/stars.png" alt="" class="stars">
+        <img src="./images/moon.png" alt="" class="moon">
+        <div class="desc">HELLO WORLD!</div>
+        <a href="#title" class="btn">进入博客</a>
+        <img src="./images/mountains_behind.png" alt="" class="mountains_behind">
+        <img src="./images/mountains_front.png" alt="" class="mountains_front">
+    </section>
+    <script>
+        const stars = document.querySelector('.stars');
+        const moon = document.querySelector('.moon');
+        const desc = document.querySelector('.desc');
+        const btn = document.querySelector('.btn');
+        const mountains_behind = document.querySelector('.mountains_behind');
+        const mountains_front = document.querySelector('.mountains_front');
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            desc.style.marginTop = value * 1.5 + "px";
+            desc.style.marginRight = value * 2.5 + "px";
+            btn.style.marginTop = value * 1.5 + "px";
+        })
+    </script>
+    <div class="text" id="title">
+        <h2>《You Have Only One Life》</h2>
+        <p>Context
+
+        </p>
+    </div>
+</body>
+
+</html>
