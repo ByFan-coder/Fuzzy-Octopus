@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>你得到了...！</title>
+</head>
+<body>
+<h1 style="color:white;text-align:center">您获得了...</h1>
+<img id="con" style="margin-left:350px" src="">
+<h1 style="color:white;text-align:center">感谢您的惠顾捏！</h1>
+</body>
+<script>
+    document.bgColor="black"
+    window.setTimeout("o.imgRandom();",10);
+    var o={
+    imgRandom:function (){
+        var b=Math.floor(Math.random()*10);
+        var cons = document.getElementById("con");
+        cons.src="store/"+b+".jpg"
+    }
+  };
+
+
+</script>
+</html>
